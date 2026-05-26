@@ -9,7 +9,6 @@ export default function ModularBook({
   backColor = '#2c3e50',
   title = "Unknown Title"
 }) {
-  // Build an isolated HTML canvas purely in JavaScript memory (out of the render tree)
   const offscreenCanvas = useMemo(() => document.createElement('canvas'), []);
   const textureRef = useRef(null);
 
@@ -17,7 +16,6 @@ export default function ModularBook({
   const width = customWidth || 14.0;   
   const height = customHeight || 21.5; 
 
-  // Repaint the canvas image whenever data updates
   useEffect(() => {
     const canvas = offscreenCanvas;
     const ctx = canvas.getContext('2d');
@@ -41,7 +39,6 @@ export default function ModularBook({
     ctx.fillText(displayedText, 0, 0);
     ctx.restore();
 
-    // Force texture reload trigger frame update
     if (textureRef.current) {
       textureRef.current.needsUpdate = true;
     }

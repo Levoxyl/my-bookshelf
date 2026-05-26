@@ -16,19 +16,18 @@ export default function CustomizerPanel({ bookData, setBookData }) {
   };
 
   return (
-// Replace the top div container inside your CustomizerPanel.jsx file:
     <div style={{
-      position: 'fixed', // Switched from absolute to fixed to break away from any hidden scaling grids
+      position: 'fixed',
       top: '24px',
       left: '24px',
       width: '340px',
-      background: '#1a1a1a', // solid dark color to test readability first
-      border: '2px solid #444', // thick border so you can spot the true dimensions
+      background: '#1a1a1a',
+      border: '2px solid #444',
       padding: '24px',
       borderRadius: '12px',
       color: '#ffffff',
       fontFamily: 'system-ui, -apple-system, sans-serif',
-      zIndex: 99999, // Absolute front layer safety buffer
+      zIndex: 99999,
       boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
     }}>
       <h2 style={{ margin: '0 0 10px 0', fontSize: '20px' }}>Book Generator</h2>
@@ -118,9 +117,9 @@ const inputStyle = {
   background: '#2a2a2a',
   border: '1px solid #555',
   color: '#fff',
-  padding: '12px', // larger target areas for click tracking
+  padding: '12px',
   borderRadius: '6px',
-  fontSize: '16px', // 16px is the browser sweet spot to prevent zooming behaviors
+  fontSize: '16px',
   width: '100%',
   outline: 'none',
 };

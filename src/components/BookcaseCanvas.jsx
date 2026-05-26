@@ -17,7 +17,7 @@ export default function BookcaseCanvas({ bookData }) {
             customWidth={bookData.customWidth} 
             customHeight={bookData.customHeight} 
             spineColor={bookData.spineColor}
-            backColor={bookData.spineColor} // Matching back to spine color for aesthetics
+            backColor={bookData.spineColor}
             title={bookData.title}
           />
         </Center>
